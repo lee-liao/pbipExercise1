@@ -1,0 +1,14 @@
+createOrReplace
+
+	ref table financials
+
+		column COGS
+			dataType: double
+			lineageTag: 3efef926-80f7-4e93-9fbd-26fc3b20ef26
+			summarizeBy: sum
+			sourceColumn: COGS
+
+			annotation SummarizationSetBy = Automatic
+
+			annotation PBI_FormatHint = {"isGeneralNumber":true}
+

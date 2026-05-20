@@ -1,0 +1,9 @@
+createOrReplace
+
+	ref table financials
+
+		/// Average net selling price per unit
+		measure 'Avg Sale Price' = DIVIDE([Total Sales], [Total Units Sold])
+			formatString: \$#,0.00
+			lineageTag: 4974a4cb-db5e-4ebc-a5af-1c816ff1150a
+

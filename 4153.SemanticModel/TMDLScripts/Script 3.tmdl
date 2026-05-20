@@ -1,0 +1,9 @@
+createOrReplace
+
+	ref table financials
+
+		/// Cost of goods sold as a percentage of net sales
+		measure 'COGS %' = DIVIDE([Total COGS], [Total Sales])
+			formatString: 0.00%
+			lineageTag: beeab81c-13a1-471e-a9e7-f9f820456684
+

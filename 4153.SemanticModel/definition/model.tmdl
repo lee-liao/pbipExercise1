@@ -10,7 +10,7 @@ annotation __PBI_TimeIntelligenceEnabled = 1
 
 annotation PBI_QueryOrder = ["financials"]
 
-annotation PBI_ProTooling = ["TMDLView_Desktop","DevMode"]
+annotation PBI_ProTooling = ["TMDLView_Desktop","DevMode","MCP-PBIModeling"]
 
 ref table financials
 ref table DateTableTemplate_dc6db567-50f5-4100-b1e2-027efa5d79d2

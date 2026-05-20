@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)",
+      "Bash(git push *)",
+      "WebSearch",
+      "Bash(npx --version)",
+      "Bash(npx -y @microsoft/powerbi-modeling-mcp@latest --help)",
+      "Bash(npm config *)",
+      "mcp__powerbi-modeling-mcp__connection_operations",
+      "mcp__powerbi-modeling-mcp__table_operations",
+      "mcp__powerbi-modeling-mcp__measure_operations",
+      "mcp__powerbi-modeling-mcp__column_operations"
+    ]
+  }
+}

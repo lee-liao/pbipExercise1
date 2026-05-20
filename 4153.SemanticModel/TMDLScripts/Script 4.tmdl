@@ -1,0 +1,9 @@
+createOrReplace
+
+	ref table financials
+
+		/// Total cost of goods sold
+		measure 'Total COGS' = SUM(financials[COGS])
+			formatString: \$#,0.00
+			lineageTag: be0faa68-9cdb-48f2-b4a4-51fd6e5f1ece
+

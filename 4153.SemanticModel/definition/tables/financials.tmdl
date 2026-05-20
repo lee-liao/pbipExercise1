@@ -1,6 +1,58 @@
 table financials
 	lineageTag: 575384ba-f379-4438-bb49-a248888947c2
 
+	/// Total net sales revenue after discounts
+	measure 'Total Sales' = SUM(financials[Sales])
+		formatString: \$#,0.00
+		lineageTag: 93e52e05-2432-4b09-89c0-d39954136780
+
+	/// Total gross sales before discounts
+	measure 'Total Gross Sales' = SUM(financials[Gross Sales])
+		formatString: \$#,0.00
+		lineageTag: eb792d60-b9a2-402c-b3d7-f571af6be4c6
+
+	/// Total discount amount applied
+	measure 'Total Discounts' = SUM(financials[Discounts])
+		formatString: \$#,0.00
+		lineageTag: 43686224-8e06-497c-9986-786cbd208c6e
+
+	/// Total cost of goods sold
+	measure 'Total COGS' = SUM(financials[COGS])
+		formatString: \$#,0.00
+		lineageTag: be0faa68-9cdb-48f2-b4a4-51fd6e5f1ece
+
+		changedProperty = IsHidden
+
+	/// Total net profit
+	measure 'Total Profit' = SUM(financials[Profit])
+		formatString: \$#,0.00
+		lineageTag: fbbe0099-5f20-4213-a407-414073b46bc6
+
+	/// Total quantity of units sold
+	measure 'Total Units Sold' = SUM(financials[Units Sold])
+		formatString: #,0
+		lineageTag: 50308f7f-f0c7-4dd9-bc9b-b240b41a7c26
+
+	/// Profit as a percentage of net sales
+	measure 'Profit Margin %' = DIVIDE([Total Profit], [Total Sales])
+		formatString: 0.00%
+		lineageTag: f46ee06a-b9f8-41bd-a922-30f34606356d
+
+	/// Discount as a percentage of gross sales
+	measure 'Discount %' = DIVIDE([Total Discounts], [Total Gross Sales])
+		formatString: 0.00%
+		lineageTag: 68b0ebe5-5a30-4a02-8f01-de6341824f43
+
+	/// Average net selling price per unit
+	measure 'Avg Sale Price' = DIVIDE([Total Sales], [Total Units Sold])
+		formatString: \$#,0.00
+		lineageTag: 4974a4cb-db5e-4ebc-a5af-1c816ff1150a
+
+	/// Cost of goods sold as a percentage of net sales
+	measure 'COGS %' = DIVIDE([Total COGS], [Total Sales])
+		formatString: 0.00%
+		lineageTag: beeab81c-13a1-471e-a9e7-f9f820456684
+
 	column Segment
 		dataType: string
 		lineageTag: ec5d1698-253c-4161-9939-6441c90e01cc
